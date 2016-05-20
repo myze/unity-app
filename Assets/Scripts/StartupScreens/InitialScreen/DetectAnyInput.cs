@@ -61,7 +61,7 @@ namespace Assets.Scripts.StartupScreens.InitialScreen
             {
 #if UNITY_STANDALONE
                 SceneManager.LoadScene("MenuScreen");
-#endif
+#else
                 //Detect if bluetooth device connected
                 if (Input.GetJoystickNames().Length > 0 && txt.text != "Press any key on controller to start")
                 {
@@ -105,6 +105,7 @@ namespace Assets.Scripts.StartupScreens.InitialScreen
                         }
                     }
                 }
+#endif
             }
         }
     }
